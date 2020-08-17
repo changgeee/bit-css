@@ -1,0 +1,35 @@
+@import './colors.less';
+
+
+
+.distill(@data , @i: 1) when(@i =< length(@data)) {
+  @item: extract(@data, @i);
+
+  .cont(@count) when (@count > 0) {
+    .cont((@count - 1));
+
+    // color
+    .color-@{item}-@{count} {
+      @c: "@{item}-@{count}";
+      color: @@c;
+    }
+
+    // background-color
+    .bg-@{item}-@{count} {
+      @c: "@{item}-@{count}";
+      background-color: @@c;
+    }
+
+    // border-color
+    .bd-@{item}-@{count} {
+      @c: "@{item}-@{count}";
+      border-color: @@c;
+    }
+
+  }
+
+  .cont(10);
+  .distill(@data, (@i + 1));
+}
+
+.distill(@colorTypes);

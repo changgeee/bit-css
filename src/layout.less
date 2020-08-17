@@ -1,0 +1,173 @@
+// 属性计算
+.cont(@count, @attr, @prefix) when (@count > 0) {
+  .cont((@count - 1), @attr, @prefix);
+
+  .@{prefix}-@{count} {
+    @{attr}: unit(@count, @unit);
+  }
+}
+
+// 百分比计算
+.percent(@count, @attr, @prefix) when (@count > 0) {
+  .percent((@count - 1), @attr, @prefix);
+
+  .@{prefix}-p@{count} {
+    @{attr}: unit(@count, %);
+  }
+}
+
+// width
+.cont(@width-range, width, w);
+.percent(100, width, w);
+// height
+.cont(@height-range, height, h);
+.percent(100, height, h);
+
+// padding
+.cont(@padding-range, padding, p);
+.cont(@padding-range, padding-top, pt);
+.cont(@padding-range, padding-right, pr);
+.cont(@padding-range, padding-bottom, pb);
+.cont(@padding-range, padding-left, pl);
+
+// margin
+.cont(@margin-range, margin, m);
+.cont(@margin-range, margin-top, mt);
+.cont(@margin-range, margin-right, mr);
+.cont(@margin-range, margin-bottom, mb);
+.cont(@margin-range, margin-left, ml);
+
+// line-height
+.cont(@line-height-range, line-height, lh);
+
+// top
+.cont(@position-range, top, t);
+
+// right
+.cont(@position-range, right, r);
+
+// bottom
+.cont(@position-range, bottom, b);
+
+// left
+.cont(@position-range, left, l);
+
+// border
+.cont(@border-range, border-width, bd);
+.cont(@border-range, border-top-width, bdt);
+.cont(@border-range, border-right-width, bdr);
+.cont(@border-range, border-bottom-width, bdb);
+.cont(@border-range, border-left-width, bdl);
+.bd-solid{
+  border-style: solid;
+}
+.bd-dashed{
+  border-style: dashed;
+}
+.bd-double{
+  border-style: double;
+}
+
+// 垂直水平居中
+.vh-parent {
+  position: relative;
+}
+.v {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.h {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.vh {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// display
+.dspl-in {
+  display: inline;
+}
+.dspl-inbl {
+  display: inline-block;
+}
+.dspl-bl {
+  display: block;
+}
+.dspl-flex{
+  display: flex;
+}
+
+// vertical-align
+.vtal-md {
+  vertical-align: middle;
+}
+.vtal-bt {
+  vertical-align: bottom;
+}
+.vtal-top {
+  vertical-align: top;
+}
+
+// float
+.fl-right {
+  float: right;
+}
+.fl-left {
+  float: left;
+}
+
+// box-sizing
+.box-ct {
+  box-sizing: content-box;
+}
+.box-bd {
+  box-sizing: border-box;
+}
+
+// position
+.pst-rlt {
+  position: relative;
+}
+.pst-absl {
+  position: absolute;
+}
+.pst-fx {
+  position: fixed;
+}
+
+// 水平滑动
+.h-scroll {
+  overflow-x: scroll;
+  width: 100%;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+// overflow
+.ovfl-hd {
+  overflow: hidden;
+}
+.ovfl-scroll {
+  overflow: scroll;
+}
+.ovfl-vsb {
+  overflow: visible;
+}
+.ovfl-x-hd {
+  overflow-x: hidden;
+}
+.ovfl-x-scroll {
+  overflow-x: scroll;
+}
+.ovfl-y-hd {
+  overflow-y: hidden;
+}
+.ovfl-y-scroll {
+  overflow-y: scroll;
+}

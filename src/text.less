@@ -1,0 +1,38 @@
+// text-align
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+// 单行省略
+.text-el {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 多行省略 2 ~ 10
+.el(@count) when (@count > 1) {
+  .el((@count - 1));
+  .text-el-@{count} {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @count;
+    -webkit-box-orient: vertical;
+  }
+}
+.el(10);
+
+// 折行
+.word-wrap {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
