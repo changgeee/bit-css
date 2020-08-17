@@ -8,7 +8,7 @@
 - 与jade(pug)模板一起使用体验更加(https://github.com/pugjs/pug);
 
 ## preview
-![image](//raw.githubusercontent.com/changgeee/bit-css/master/example/assets/preview.png)
+![image](https://raw.githubusercontent.com/changgeee/bit-css/master/example/assets/preview.png)
 
 
 ## 包含的属性(class)
