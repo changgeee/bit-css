@@ -14,6 +14,7 @@
 - margin(.m-* ,.mt-* ,.mr-* ,.mb-* ,.ml-*,)
 - boder-width(.bd-* ,.bdt-* ,.bdr-* ,.bdb-* ,.bdl-*)
 - boder-style(.bd-solid,.bd-dashed,.bd-double)
+- border-radius(.bd-r-*)
 - 百分比宽高1-100(w-p* ,h-p*)
 - line-height(.lh-*)
 - position(.pst-absl ,.pst-rlt ,.pst-fx)
@@ -34,6 +35,14 @@
 - 单行省略(.text-el)
 - 多行省略，2-10(.text-el-*)
 - 折行(.word-wrap)
+- font-size(.fs-*)
+- font-weight(.fw-*)
+
+#### 支持配置的属性
+- https://github.com/changgeee/bit-css/blob/master/src/custom.less
+
+## install
+```发布中```
 
 
-
+## usaga

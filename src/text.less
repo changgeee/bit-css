@@ -36,3 +36,17 @@
   word-break: break-all;
 }
 
+// font-size
+.cont(@font-size-range, font-size, fs);
+
+// font-weight
+.fw(@count) when (@count > 0) {
+  .fw((@count - 1));
+  @w:@count*100;
+  .fw-@{w} {
+    font-weight: @w;
+  }
+}
+.fw(7);
+
+
