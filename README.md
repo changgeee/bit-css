@@ -5,7 +5,11 @@
 - 内置了antDesign调色板（https://ant.design/docs/spec/colors），更方便的调试和配色；
 - 支持less变量覆盖的方式自定义尺寸范围;
 - 支持pc，h5,小程序，react-native，支持单位配置(px,Px,PX,em,rem,rpx等);
-- 与jade(pug)模板一起使用体验更加;
+- 与jade(pug)模板一起使用体验更加(https://github.com/pugjs/pug);
+
+## preview
+![image](http://github.com/changgeee/bit-css/example/assets/preview.png)
+
 
 ## 包含的属性(class)
 - width(.w-*)
