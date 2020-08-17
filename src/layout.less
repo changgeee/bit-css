@@ -1,5 +1,5 @@
 // 属性计算
-.cont(@count, @attr, @prefix) when (@count > 0) {
+.cont(@count, @attr, @prefix) when (@count >= 0) {
   .cont((@count - 1), @attr, @prefix);
 
   .@{prefix}-@{count} {
