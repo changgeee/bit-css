@@ -42,7 +42,34 @@
 - https://github.com/changgeee/bit-css/blob/master/src/custom.less
 
 ## install
-```发布中```
-
+``` bash
+npm install @changgeee/bit-css
+```
 
 ## usaga
+#### 与webpack一起使用
+``` less
+  @import "@changgeee/bit-css";
+  // 修改默认变量，ex:
+  @unit: rpx;
+```
+> vue3 需在vue.config.js中加入如下配置
+  ``` javascript
+    module.exports = {
+      css: {
+        loaderOptions: {
+          less: {
+            lessOptions: {
+              javascriptEnabled: true,
+            }
+          }
+        }
+      }
+    };
+  ```
+#### 单独使用
+``` html
+<!-- dist 目录下含有 375px 尺寸的css压缩文件，如需修改配置，请使用less工具修改编译后手动引入 -->
+<script src="@changgeee/bit-css/dist/bit-css.375.px.css"></script>
+
+```
