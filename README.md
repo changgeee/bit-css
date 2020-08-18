@@ -10,6 +10,8 @@
 ## preview
 ![image](https://raw.githubusercontent.com/changgeee/bit-css/master/example/assets/preview.png)
 
+## 快速体验
+- codepen(https://codepen.io/changgeee/pen/LYNZyxY)
 
 ## 包含的属性(class)
 - width(.w-*)
@@ -45,9 +47,13 @@
 #### 支持配置的属性
 - https://github.com/changgeee/bit-css/blob/master/src/custom.less
 
+
 ## install
 ``` bash
-npm install @changgeee/bit-css
+# npm packahe
+npm config set registry http://registry.npmjs.org
+# github package
+npm --registry https://npm.pkg.github.com  i -D @changgeee/bit-css
 ```
 
 ## usaga
