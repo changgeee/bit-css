@@ -50,7 +50,7 @@
 
 ## install
 ``` bash
-# npm packahe
+# npm package
 npm config set registry http://registry.npmjs.org
 # github package
 npm --registry https://npm.pkg.github.com  i -D @changgeee/bit-css
@@ -59,6 +59,9 @@ npm --registry https://npm.pkg.github.com  i -D @changgeee/bit-css
 ## usaga
 #### 与webpack一起使用
 ``` less
+  // npm package
+  @import "bit-css";
+  // github package
   @import "@changgeee/bit-css";
   // 修改默认变量，ex:
   @unit: rpx;
