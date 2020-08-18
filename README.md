@@ -86,6 +86,7 @@ npm --registry https://npm.pkg.github.com  i -D @changgeee/bit-css
 #### 单独使用
 ``` html
 <!-- dist 目录下含有 375px 尺寸的css压缩文件，如需修改配置，请使用less工具修改编译后手动引入 -->
-<script src="@changgeee/bit-css/dist/bit-css.375.px.css"></script>
-
+<script src="bit-css/dist/bit-css.375.px.css"></script>
+<!-- unpkg 线上地址 -->
+<script src="https://unpkg.com/bit-css/dist/bit-css.375.px.css"></script>  
 ```
