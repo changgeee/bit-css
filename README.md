@@ -90,3 +90,54 @@ npm --registry https://npm.pkg.github.com  i -D @changgeee/bit-css
 <!-- unpkg 线上地址 -->
 <script src="https://unpkg.com/bit-css/dist/bit-css.375.px.css"></script>  
 ```
+
+## css体积过大？
+- 推荐使用purgecss相关插件进行无效css剔除
+- 参考`./example`,使用前css文件73k，使用后0.7k
+- 以vue项目为例，使用purgecss-webpack-plugin(所有使用webpack构建项目同理)
+``` javascript
+// vue.config.js
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const glob = require('glob-all')
+const path = require('path')
+
+module.exports = {
+  configureWebpack: {
+    plugins: [
+      new PurgecssPlugin({
+        paths: glob.sync([
+          path.join(__dirname, './src/index.html'),
+          path.join(__dirname, './**/*.vue'),
+          path.join(__dirname, './src/**/*.js')
+        ])
+      })
+    ]
+  }
+}
+
+```
+
+## License
+```License
+MIT License
+
+Copyright (c) 2020 changge
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
