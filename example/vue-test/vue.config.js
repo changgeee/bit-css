@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const glob = require('glob-all')
 const path = require('path')
 
-=======
->>>>>>> 4e718c1930c03b29baa8d584b6c773489247552f
 module.exports = {
   css: {
     loaderOptions: {
@@ -14,7 +11,6 @@ module.exports = {
         }
       }
     }
-<<<<<<< HEAD
   },
   configureWebpack: {
     plugins: [
@@ -26,7 +22,5 @@ module.exports = {
         ])
       })
     ]
-=======
->>>>>>> 4e718c1930c03b29baa8d584b6c773489247552f
   }
 };
