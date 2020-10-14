@@ -7,6 +7,15 @@
   }
 }
 
+.cont(@count, @attr, @prefix, @attr2) when (@count >= 0) {
+  .cont((@count - 1), @attr, @prefix, @attr2);
+
+  .@{prefix}-@{count} {
+    @{attr}: unit(@count, @unit);
+    @{attr2}: unit(@count, @unit);
+  }
+}
+
 // 百分比计算
 .percent(@count, @attr, @prefix) when (@count > 0) {
   .percent((@count - 1), @attr, @prefix);
@@ -29,8 +38,8 @@
 .cont(@padding-range, padding-right, pr);
 .cont(@padding-range, padding-bottom, pb);
 .cont(@padding-range, padding-left, pl);
-.cont(@padding-range, padding-left, plr);
-.cont(@padding-range, padding-left, ptb);
+.cont(@padding-range, padding-left, plr, padding-right);
+.cont(@padding-range, padding-top, ptb, padding-bottom);
 
 
 // margin
@@ -39,8 +48,8 @@
 .cont(@margin-range, margin-right, mr);
 .cont(@margin-range, margin-bottom, mb);
 .cont(@margin-range, margin-left, ml);
-.cont(@margin-range, margin-left, mlr);
-.cont(@margin-range, margin-left, mrb);
+.cont(@margin-range, margin-left, mlr, margin-right);
+.cont(@margin-range, margin-top, mtb,  margin-bottom);
 
 // line-height
 .cont(@line-height-range, line-height, lh);

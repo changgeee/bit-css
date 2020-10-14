@@ -1,6 +1,6 @@
 {
   "name": "bit-css",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "bit-css",
   "main": "src/index.less",
   "scripts": {
