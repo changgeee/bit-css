@@ -1,6 +1,6 @@
 {
   "name": "bit-css",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "bit-css",
   "main": "src/index.less",
   "scripts": {
@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/changgeee/bit-css/issues"
   },
-  "homepage": "https://github.com/changgeee/bit-css#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@changgeee"
-  }
+  "homepage": "https://github.com/changgeee/bit-css#readme"
 }
