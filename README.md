@@ -54,7 +54,7 @@
 ## install
 ``` bash
 # npm package
-npm config set registry http://registry.npmjs.org
+npm i bit-css --save
 # github package
 npm --registry https://npm.pkg.github.com  i -D @changgeee/bit-css
 ```
